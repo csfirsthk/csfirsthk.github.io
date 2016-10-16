@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Calendar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link href='assets/css/fullcalendar.min.css' rel='stylesheet' />
+		<link href='assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+		<script src='assets/js/lib/moment.min.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src='assets/js/fullcalendar.min.js'></script>
+		<script src='assets/js/gcal.js'></script>
+		<script>
+
+			$(document).ready(function() {
+			
+				$('#calendar').fullCalendar({
+
+					header: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'month,listYear'
+					},
+
+					displayEventTime: false, // don't show the time column in list view
+
+					// THIS KEY WON'T WORK IN PRODUCTION!!!
+					// To make your own Google API key, follow the directions here:
+					// http://fullcalendar.io/docs/google_calendar/
+					googleCalendarApiKey: 'AIzaSyC9sCARyZE2VbiV1A1CchVD0Se0WmngyII',
+				
+					// CS First HK
+					events: 'csfirsthk@gmail.com',
+					
+					eventClick: function(event) {
+						// opens events in a popup window
+						window.open(event.url, 'gcalevent', 'width=700,height=600');
+						return false;
+					},
+					
+					loading: function(bool) {
+						$('#loading').toggle(bool);
+					}
+					
+				});
+				
+			});
+
+		</script>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<!-- Logo -->
+							<a href="index.html"><h1>Google CS First & Hong Kong</h1></a>
+
+
+						<!-- Nav -->
+							<nav id="nav" class="titlebar">
+								<ul>
+									<li class="current"><a href="index.html">Home</a></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="network-members.html">Network Members</a></li>
+									<li><a href="current-clubs.html">Current Clubs</a></li><li><a href="calendar.html">Calendar</a></li>
+									<li><a href="signup.html">Sign Up!</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+						<!-- CALENDAR -->
+						<div id='loading'>loading...</div>
+
+						<div id='calendar'></div>
+
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<div id="footer-wrapper">
+					<section id="footer" class="container">
+						<div class="row">
+
+
+							<div class="4u 12u(mobile)">
+								<section>
+									<header>
+										<h2>Upcoming Events</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Jan <strong>27</strong></span>
+											<h3><a href="#">1st Annual Graduation</a></h3>
+											<p>All participants are invited to join the CS First graduation @ Google to mark their achievement!</p>
+							
+										</li>
+									</ul>
+								</section>
+							</div>
+
+			<div class="4u 12u(mobile)">
+								<section>
+									<header>
+										<h2>Core Partners</h2>
+									</header>
+									<ul class="divided">
+										<li><a href="#">First Code Academy</a></li>
+										<li><a href="#">Kids4Kids</a></li>
+										<li><a href="#">Google</a></li>
+									</ul>
+								</section>
+							</div>
+
+
+							<div class="4u 12u(mobile)">
+								<section>
+									<header>
+										<h2>Contact Us</h2>
+									</header>
+									<ul class="social">
+
+										<li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+										<li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+									</ul>
+									<ul class="contact">
+										<li>
+											<h3>Mail</h3>
+											<p><a href="#">csfirsthk@gmail.com</a></p>
+										</li>
+									</ul>
+								</section>
+							</div>
+				
+						</div>
+
+							
+						</div>
+
+
+						<div class="row">
+							<div class="12u">
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</section>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
